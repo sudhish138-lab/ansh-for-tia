@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Tia ❤️</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #09070a;
+  color: #fff;
+  font-family: Georgia, "Times New Roman", serif;
+  overflow-x: hidden;
+}
+
+/* Floating hearts */
+.heart {
+  position: fixed;
+  bottom: -30px;
+  font-size: 18px;
+  opacity: 0;
+  animation: float 8s linear infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) scale(.8);
+    opacity: 0;
+  }
+  15% { opacity: .7; }
+  100% {
+    transform: translateY(-110vh) scale(1.4);
+    opacity: 0;
+  }
+}
+
+/* Hero */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 30px;
+  position: relative;
+  background:
+    radial-gradient(circle at center, #32151f 0%, #110b10 45%, #09070a 80%);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+}
+
+.small {
+  color: #dca4b5;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: clamp(50px, 12vw, 100px);
+  font-weight: normal;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  color: #d8c8cd;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 35px;
+  padding: 14px 30px;
+  border: 1px solid #c77a91;
+  border-radius: 50px;
+  color: white;
+  text-decoration: none;
+  transition: .3s;
+}
+
+.button:hover {
+  background: #c77a91;
+  transform: translateY(-3px);
+}
+
+/* Sections */
+section {
+  min-height: 80vh;
+  padding: 100px 20px;
+  max-width: 1000px;
+  margin: auto;
+  position: relative;
+  z-index: 1;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 42px;
+  font-weight: normal;
+  margin-bottom: 50px;
+}
+
+.text {
+  max-width: 700px;
+  margin: auto;
+  color: #d9cdd1;
+  font-size: 18px;
+  line-height: 2;
+  text-align: center;
+}
+
+/* Memories */
+.memory-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.memory {
+  height: 280px;
+  border: 1px solid #39242c;
+  background: linear-gradient(145deg, #171015, #0e0a0d);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.memory-photo {
+  width: 100%;
+  height: 180px;
+  border-radius: 8px;
+  background: #21171d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #8e727c;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.memory p {
+  color: #d8c4cb;
+  font-size: 15px;
+}
+
+/* Reasons */
+.reason {
+  max-width: 700px;
+  margin: 18px auto;
+  padding: 25px;
+  border-left: 2px solid #bd7188;
+  background: rgba(255,255,255,.025);
+}
+
+.reason p {
+  color: #d8cbd0;
+  line-height: 1.8;
+}
+
+/* Final letter */
+.letter {
+  max-width: 720px;
+  margin: auto;
+  padding: 45px 30px;
+  border: 1px solid #39242c;
+  background: rgba(255,255,255,.025);
+  border-radius: 14px;
+}
+
+.letter p {
+  color: #ddd0d5;
+  font-size: 18px;
+  line-height: 2;
+  margin-bottom: 22px;
+}
+
+.signature {
+  text-align: right;
+  color: #e5a5b7;
+  font-size: 21px;
+  margin-top: 35px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 60px 20px;
+  color: #735d65;
+  font-size: 13px;
+}
+
+/* Mobile */
+@media(max-width: 650px) {
+  .memory-grid {
+    grid-template-columns: 1fr;
+  }
+
+  section {
+    padding: 80px 18px;
+  }
+
+  .section-title {
+    font-size: 34px;
+  }
+
+  .text,
+  .letter p {
+    font-size: 16px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Floating hearts -->
+<div class="heart" style="left:8%; animation-delay:0s;">♥</div>
+<div class="heart" style="left:20%; animation-delay:2s;">♡</div>
+<div class="heart" style="left:35%; animation-delay:5s;">♥</div>
+<div class="heart" style="left:55%; animation-delay:1s;">♡</div>
+<div class="heart" style="left:70%; animation-delay:4s;">♥</div>
+<div class="heart" style="left:88%; animation-delay:7s;">♡</div>
+
+<!-- HERO -->
+<header class="hero">
+
+  <div class="hero-content">
+
+    <div class="small">A little something for you</div>
+
+    <h1>For Tia ❤️</h1>
+
+    <p>
+      I don't really know how to put everything I feel into words,
+      but I wanted to try.
+    </p>
+
+    <a href="#story" class="button">Open it →</a>
+
+  </div>
+
+</header>
+
+
+<!-- STORY -->
+<section id="story">
+
+  <h2 class="section-title">Our Story</h2>
+
+  <div class="text">
+
+    <p>
+      It still feels a little crazy to me that everything started
+      with me replying to your Instagram story.
+    </p>
+
+    <br>
+
+    <p>
+      At that time, I had no idea that one random message would
+      lead to you becoming such an important part of my life.
+    </p>
+
+    <br>
+
+    <p>
+      Somehow, that one small conversation turned into so many
+      memories, so much time together, and a person I genuinely
+      don't want to lose.
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- MEMORIES -->
+<section>
+
+  <h2 class="section-title">Our Memories ❤️</h2>
+
+  <div class="memory-grid">
+
+    <div class="memory">
+      <div class="memory-photo">YOUR PHOTO 1</div>
+      <p>One of my favorite memories with you.</p>
+    </div>
+
+    <div class="memory">
+      <div class="memory-photo">YOUR PHOTO 2</div>
+      <p>I wish I could go back to this moment.</p>
+    </div>
+
+    <div class="memory">
+      <div class="memory-photo">YOUR PHOTO 3</div>
+      <p>Just another moment that became special because it was with you.</p>
+    </div>
+
+    <div class="memory">
+      <div class="memory-photo">YOUR PHOTO 4</div>
+      <p>That movie day I'll always remember.</p>
+    </div>
+
+    <div class="memory">
+      <div class="memory-photo">YOUR PHOTO 5</div>
+      <p>I love the time we get to spend together.</p>
+    </div>
+
+    <div class="memory">
+      <div class="memory-photo">YOUR PHOTO 6</div>
+      <p>Some memories don't need a reason to stay.</p>
+    </div>
+
+    <div class="memory">
+      <div class="memory-photo">YOUR PHOTO 7</div>
+      <p>This moment still makes me smile.</p>
+    </div>
+
+    <div class="memory">
+      <div class="memory-photo">YOUR PHOTO 8</div>
+      <p>Just us. That's enough.</p>
+    </div>
+
+    <div class="memory">
+      <div class="memory-photo">YOUR PHOTO 9</div>
+      <p>One more memory I want to keep forever.</p>
+    </div>
+
+    <div class="memory">
+      <div class="memory-photo">YOUR PHOTO 10</div>
+      <p>And hopefully, this is only the beginning.</p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- SPECIAL -->
+<section>
+
+  <h2 class="section-title">Why You're Special</h2>
+
+  <div class="reason">
+    <p>
+      One thing I really appreciate about you is that you're there
+      for me when I actually need someone.
+    </p>
+  </div>
+
+  <div class="reason">
+    <p>
+      When I'm having a difficult time, you listen to me,
+      comfort me, and support me. You somehow make things feel
+      a little easier just by being there.
+    </p>
+  </div>
+
+  <div class="reason">
+    <p>
+      I don't think I always say it properly, but I notice all of it.
+      I notice the little things you do, the time you give me,
+      the way you care about me, and the way you stay beside me.
+    </p>
+  </div>
+
+  <div class="reason">
+    <p>
+      And honestly, that means a lot to me.
+    </p>
+  </div>
+
+</section>
+
+
+<!-- US -->
+<section>
+
+  <h2 class="section-title">Us ❤️</h2>
+
+  <div class="text">
+
+    <p>
+      I don't need everything to be perfect between us.
+    </p>
+
+    <br>
+
+    <p>
+      I just want us to keep choosing each other, keep understanding
+      each other, keep supporting each other, and keep making
+      memories together.
+    </p>
+
+    <br>
+
+    <p>
+      From random conversations to spending time together,
+      from bunking school for a movie to just sitting around
+      doing nothing… somehow, the simplest moments with you
+      become my favorite ones.
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- FINAL LETTER -->
+<section>
+
+  <h2 class="section-title">One Last Thing...</h2>
+
+  <div class="letter">
+
+    <p><strong>Tia,</strong></p>
+
+    <p>
+      I don't know what the future is going to look like,
+      and I don't want to make some huge promise about
+      everything being perfect forever.
+    </p>
+
+    <p>
+      But I do know that I'm really grateful that I met you.
+    </p>
+
+    <p>
+      Thank you for being there when I've needed you.
+      Thank you for listening to me.
+      Thank you for supporting me.
+      Thank you for all the little things you probably
+      don't even realize I notice.
+    </p>
+
+    <p>
+      And thank you for giving me so many memories
+      that I'll always be happy I had.
+    </p>
+
+    <p>
+      I just hope we get to make a lot more of them.
+    </p>
+
+    <p>
+      <strong>I love you, Tia. ❤️</strong>
+    </p>
+
+    <p>
+      And no matter how far apart we are,
+      you'll always have a very special place in my heart.
+    </p>
+
+    <div class="signature">
+      — Ansh ❤️
+    </div>
+
+  </div>
+
+</section>
+
+
+<footer>
+  Made with love, just for Tia ❤️
+</footer>
+
+</body>
+</html>
